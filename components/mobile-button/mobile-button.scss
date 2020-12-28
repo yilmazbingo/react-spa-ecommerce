@@ -1,0 +1,27 @@
+.mobile-button {
+  background-color: rgb(221, 208, 26);
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 3.2rem;
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 800px) {
+    display: flex;
+    width: 100%;
+  }
+  .add-to-cart {
+    font-size: 1.4rem;
+    // margin-left: 2rem;
+    font-family: Montserrat;
+    font-weight: bolder;
+
+    // margin-bottom: 5rem !important;
+  }
+
+  .cart-icon {
+    height: 90%;
+    width: 20%;
+  }
+}

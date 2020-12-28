@@ -1,0 +1,29 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  //space between will push apart children tags
+
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    // all four paddings are 25px
+
+    padding: 25px;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+}

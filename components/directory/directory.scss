@@ -1,0 +1,13 @@
+.directory-menu {
+  width: 100%;
+  display: flex;
+  //By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.
+  // wrap: flex items will wrap onto multiple lines, from top to bottom.
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.banner h1 {
+  font-size: 2.5rem;
+}
+.banner div {
+  width: 17rem;
+  height: 5px;
+  background: #af9a7d;
+  margin: 1.7rem auto;
+}
+.banner p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: orange;
+}
+@media screen and (min-width: 576px) {
+  .banner {
+    padding: 2rem 3rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 4.4rem;
+  }
+}

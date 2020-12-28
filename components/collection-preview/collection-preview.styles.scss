@@ -1,0 +1,30 @@
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  // @media screen and (max-width: 80rem) {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  //   grid-gap: 1.5rem;
+  // }
+
+  .preview {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 800px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1.5rem;
+    }
+  }
+}

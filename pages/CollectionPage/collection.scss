@@ -1,0 +1,31 @@
+.collection-page {
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  .title {
+    font-size: 3.8rem;
+    margin: 0 auto 3rem;
+  }
+  .items {
+    width: 100vw;
+    display: grid;
+    // flex-direction: column;
+    // "free space". 1fr is dynamic,and takes up all the free space available within the container.
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-columns: repeat(3, 1fr);
+
+    // grid-gap: 1rem;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    & .collection-item {
+      margin-bottom: 30px;
+      width: 22vw;
+      @media screen and (max-width: 600px) {
+        width: 44vw;
+      }
+    }
+  }
+}

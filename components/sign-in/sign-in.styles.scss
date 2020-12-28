@@ -1,0 +1,16 @@
+//otherweise it expands the full width of our compoennent.
+
+.sign-in {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin: 10px 0;
+  }
+  //box-sizing is set in all browsers. margins, padding and borders all set
+  //we can change this in app.css
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

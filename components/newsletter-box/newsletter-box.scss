@@ -1,0 +1,15 @@
+.newsletter {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h3 {
+    text-transform: capitalize;
+  }
+}
+
+.mail-icon {
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}

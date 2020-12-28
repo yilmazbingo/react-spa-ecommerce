@@ -1,0 +1,17 @@
+// .featured-products {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+.featured-products-title {
+  background-color: gray;
+  color: rgb(90, 246, 0);
+  font-family: Alice-Regular;
+  margin: 2rem 0;
+  display: flex;
+  height: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
