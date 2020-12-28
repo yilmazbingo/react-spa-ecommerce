@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open",
     "push": "git add . && git commit -m \" initial commit\" && git push",
+    "build": "webpack",
     "start": "node build/bundle.js"
   },
   "keywords": [],
