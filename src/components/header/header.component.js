@@ -41,7 +41,7 @@ const Header = (props) => {
           <OptionLink to="/store">STORE</OptionLink>
         )}
 
-        <OptionGithub href="https://github.com/yilmazbingo/ecommerce">
+        <OptionGithub href="https://github.com/yilmazbingo/react-spa-ecommerce">
           <AiFillGithub className="github-icon" />{" "}
         </OptionGithub>
 
