@@ -66,6 +66,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "public"),
     overlay: true,
+    // publicPath:"/dist/" if needed
   },
   plugins: [
     new HtmlWebPackPlugin({
