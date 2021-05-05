@@ -6,6 +6,7 @@ http://react-spa-ecommerce.herokuapp.com/
 
 - "development.env" define those environment variables:
 
+```js
 NODE_ENV=development
 STRIPE_PUBLIC_API_KEY=
 STRIPE_SECRET_KEY=
@@ -17,6 +18,7 @@ FIREBASE_STORAGE_BUCKET=
 FIREBASE_MESSAGING_SENDER_ID=
 FIREBASE_APP_ID=
 FIREBASE_MEASUREMENT_ID=
+```
 
 - then
   `npm run dev`
