@@ -69,6 +69,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   );
 };
 
+//  is used for dispatching actions to the store.
 const mapDispatchToProps = (dispatch) => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
   emailSignInStart: (email, password) =>

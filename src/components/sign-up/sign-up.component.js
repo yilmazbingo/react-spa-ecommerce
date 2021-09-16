@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import FormInput from "../form-input/form-input.component";
+import { selectCurrentUser } from "../../redux/user/user.selector";
 import CustomButton from "../custom-button/custom-botton.component";
 import { signUpStart } from "../../redux/user/user.actions";
 import "./sign-up.styles.scss";
 
-const SignUp = ({ signUpStart }) => {
+const SignUp = ({ signUpStart, currentUser }) => {
+  console.log("currentUser", currentUser);
   const [userCredentials, setUserCredentials] = useState({
     displayName: "",
     email: "",
@@ -66,14 +69,20 @@ const SignUp = ({ signUpStart }) => {
           label="Confirm Password"
           required
         ></FormInput>
-        <CustomButton>SIGN UP</CustomButton>
+        <CustomButton disabled={currentUser} type="submit">
+          SIGN UP
+        </CustomButton>
       </form>
+      {currentUser && <div className="signup-status"> Signup Success </div>}
     </div>
   );
 };
 
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+});
 const mapDispatchToProps = (dispatch) => ({
   signUpStart: (userCredentials) => dispatch(signUpStart(userCredentials)),
 });
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
