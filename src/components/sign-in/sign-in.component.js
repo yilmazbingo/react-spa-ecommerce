@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-botton.component";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+
 import {
   googleSignInStart,
   emailSignInStart,
 } from "../../redux/user/user.actions";
 import "./sign-in.styles.scss";
 
-const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
+  console.log("history in login", history);
   const [userCredentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -19,7 +22,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     //   we want full control over what submit will do
     event.preventDefault();
 
-    emailSignInStart(email, password);
+    emailSignInStart({ email, password, history });
   };
   const handleChange = (event) => {
     //event.target is the input element itself
@@ -75,4 +78,4 @@ const mapDispatchToProps = (dispatch) => ({
   emailSignInStart: (email, password) =>
     dispatch(emailSignInStart({ email, password })),
 });
-export default connect(null, mapDispatchToProps)(SignIn);
+export default withRouter(connect(null, mapDispatchToProps)(SignIn));

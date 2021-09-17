@@ -47,10 +47,16 @@ export function* onGoogleSignInStart() {
 }
 
 //------------------------------------------EMAIL----------------------------------------------------
-export function* signInWithEmail({ payload: { email, password } }) {
+export function* signInWithEmail({ payload }) {
   try {
+    console.log("I am in signin with email saga", payload.email);
+    const { email, password, history } = payload.email;
+    // console.log("payload in signin saga", payload);
     const { user } = yield auth.signInWithEmailAndPassword(email, password);
+    console.log("user in signin saga  ", user);
     yield getSnapshotFromUserAuth(user);
+    console.log("history", history);
+    history.push("/");
   } catch (error) {
     yield put(signInFailure(error));
   }
